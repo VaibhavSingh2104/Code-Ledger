@@ -31,45 +31,39 @@
 </head>
 
 <body>
+  
+        <div class="box-signin ">
+            <form action="/login" method="POST">
+                <div class="mb-3 box-text">
+                    <label class="form-label">Problem Name</label>
+                    <input class="form-control box"  
+                         autocomplete="off">
+                    <div id="emailHelp" class="form-text"></div>
+                </div>
+                <div class="mb-3 box-text">
+                    <label  class="form-label">Link</label>
+                    <div class="col-auto">
+                        <input  id="inputPassword6" class="form-control box"
+                            aria-describedby="passwordHelpInline" >
+                    </div> 
+                </div>
 
-    <div class="box-signin ">
-        <center>
-            <h1>Today's Problem</h1>
-        </center>
-
-
-        <div class="box">
-
-            <% questions.forEach(function(item){ %>
-                <% if (item && item.name) { %>
-                    <form action="/deleteQuestion" method="post">
-                        <div class="item">
-                            <input type="checkbox">
-                            <p class="text">
-                                <%= item.name %>
-                            </p>
-                        </div>
-                        <input type="hidden" name="" value=""></input>
-                    </form>
-                    <% } %>
-
-
-                        <% }) %>
+                <button type="submit" class="btn btn-outline-light btn-md easy-button">Easy</button>
+                <button type="submit" class="btn btn-outline-light btn-md medium-button">Medium</button>
+                <button type="submit" class="btn btn-outline-light btn-md hard-button">Hard</button>
 
 
+                <div class="mb-3 box-text">
+                    <label class="form-label">Notes</label>
+                    <div class="col-auto">
+                        <input id="" class="form-control box" aria-describedby="passwordHelpInline">
+                    </div>
+                </div>
+    
+                
+            </form>
         </div>
-
-        <button type="submit" class="btn btn-outline-light btn-lg medium-button gap">Snippet</button>
-
-        <button type="submit" class="btn btn-outline-light btn-lg medium-button gap">Question</button>
-
-
-
-
-
-        </form>
-    </div>
-
+ 
     <script src="popup.js"></script>
 </body>
 
